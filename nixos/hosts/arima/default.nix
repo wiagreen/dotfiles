@@ -20,7 +20,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "megumax" = import ./home ;
+      "user" = import ./home ;
     };
   };
 

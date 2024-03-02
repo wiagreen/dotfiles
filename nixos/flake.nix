@@ -13,8 +13,6 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -30,40 +28,10 @@
             ./hosts/arima
           ];
         };
-
-        furuta = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/furuta
-          ];
-        };
-
-        takizawa = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/takizawa
-          ];
-        };
       };
 
       homeConfigurations = {
         arima = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/arima/home
-          ];
-        };
-
-        furuta = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/arima/home
-          ];
-        };
-
-        takizawa = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [

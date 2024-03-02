@@ -9,7 +9,6 @@
     ./programs/desktop/foot
     
     ./programs/terminal/tmux
-    ./programs/terminal/btop
     ./programs/terminal/shell
 
     ./dev 
@@ -17,13 +16,12 @@
   ];
 
   home = {
-    username = "megumax";
-    homeDirectory = "/home/megumax";
+    username = "user";
+    homeDirectory = "/home/user";
     stateVersion = "23.11";
     packages = with pkgs; [
       telegram-desktop
       xfce.mousepad
-      prismlauncher
       qbittorrent
       pavucontrol
       libnotify
@@ -31,7 +29,6 @@
       zathura
       pamixer
       lutgen
-      meson
       slurp
       grim
       cmus

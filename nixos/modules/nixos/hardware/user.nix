@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
-  users.users.megumax = {
+  users.users.user = {
     isNormalUser = true;
-    description = "megumax";
+    description = "user";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
     packages = with pkgs; [
