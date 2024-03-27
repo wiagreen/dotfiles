@@ -5,8 +5,6 @@
     description = "user";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      fishPlugins.tide
-    ];
+    packages = with pkgs; [];
   };
 }
